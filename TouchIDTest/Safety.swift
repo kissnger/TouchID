@@ -24,8 +24,8 @@ class Safety: NSObject {
         var laContext = LAContext()
         
         var authError : NSError?
-        
-        var errorReason = "keep things secret"
+//        弹出输入指纹的时候的提示文字   （不能为空）
+        var errorReason = "请输入使用者的指纹"
         
         if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &authError){
             laContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: errorReason, reply: { (success, error) -> Void in

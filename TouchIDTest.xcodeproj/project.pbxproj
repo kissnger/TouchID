@@ -19,6 +19,7 @@
 		5676174A1B0A44C800B2530A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567617491B0A44C800B2530A /* SettingViewController.swift */; };
 		5676174D1B0A48A700B2530A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5676174B1B0A48A700B2530A /* home.png */; };
 		5676174E1B0A48A700B2530A /* home1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5676174C1B0A48A700B2530A /* home1.png */; };
+		567617501B0A5E7E00B2530A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676174F1B0A5E7E00B2530A /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		567617491B0A44C800B2530A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5676174B1B0A48A700B2530A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		5676174C1B0A48A700B2530A /* home1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home1.png; sourceTree = "<group>"; };
+		5676174F1B0A5E7E00B2530A /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				567617461B0A437D00B2530A /* Controller */,
 				567617441B0A3FA500B2530A /* AppDelegate.swift */,
 				567617421B0A3EA500B2530A /* Safety.swift */,
+				5676174F1B0A5E7E00B2530A /* Util.swift */,
 				567617241B0A38A600B2530A /* Main.storyboard */,
 				567617271B0A38A600B2530A /* Images.xcassets */,
 				5676174B1B0A48A700B2530A /* home.png */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5676174A1B0A44C800B2530A /* SettingViewController.swift in Sources */,
+				567617501B0A5E7E00B2530A /* Util.swift in Sources */,
 				567617451B0A3FA500B2530A /* AppDelegate.swift in Sources */,
 				567617431B0A3EA500B2530A /* Safety.swift in Sources */,
 				567617231B0A38A600B2530A /* ViewController.swift in Sources */,
@@ -441,6 +445,7 @@
 				5676173C1B0A38A600B2530A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5676173D1B0A38A600B2530A /* Build configuration list for PBXNativeTarget "TouchIDTestTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +454,7 @@
 				5676173F1B0A38A600B2530A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

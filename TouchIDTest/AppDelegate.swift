@@ -10,15 +10,17 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var notiName = "TouchID"
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "safeNoti", name: "TouchID", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "TouchID", object: nil))
+        
+        Util.addNotiCenter(self,name: notiName, selector: "safeNoti")
+        
+        Util.postNoti(name:notiName)
         
         
         return true
@@ -37,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
-        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "TouchID", object: nil))
+        Util.postNoti(name:notiName)
         
     }
 

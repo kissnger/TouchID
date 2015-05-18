@@ -36,14 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="我的" id="G8U-kV-53f">
-                        <barButtonItem key="rightBarButtonItem" title="设置" id="fUu-Cy-XBd">
-                            <connections>
-                                <action selector="clickSetting" destination="zyn-j7-br7" id="Gn3-xn-OHh"/>
-                                <segue destination="clL-hP-q3O" kind="push" id="3ZB-4e-YaX"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="我的" id="G8U-kV-53f"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79F-da-Nrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,7 +45,7 @@
         <!--设置-->
         <scene sceneID="Nlm-X0-YlP">
             <objects>
-                <viewController id="clL-hP-q3O" customClass="SettingViewController" customModule="TouchIDTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="clL-hP-q3O" customClass="SettingViewController" customModule="TouchIDTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OIy-r4-Xla"/>
                         <viewControllerLayoutGuide type="bottom" id="Odh-D5-8TY"/>

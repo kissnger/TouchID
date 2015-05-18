@@ -11,7 +11,7 @@ import UIKit
 class SettingViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.hidden = true
+//        self.tabBarController?.tabBar.hidden = true
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)

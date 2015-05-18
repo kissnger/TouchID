@@ -11,11 +11,15 @@ import UIKit
 class MineViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.hidden = false
+//        self.tabBarController?.tabBar.hidden = false
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var rightItem = UIBarButtonItem(title: "设置", style: UIBarButtonItemStyle.Plain, target: self, action: "clickSetting")
+        self.navigationItem.rightBarButtonItem = rightItem
+        
+//        self.navigationItem.rightBarButtonItem?.title = "设置"
+        
         // Do any additional setup after loading the view.
     }
     
@@ -24,8 +28,11 @@ class MineViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clickSetting(){
-        hiddenTabbar()
+    func clickSetting(){
+        var vc = self.storyboard?.instantiateViewControllerWithIdentifier("SettingVC") as! SettingViewController
+        vc.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
