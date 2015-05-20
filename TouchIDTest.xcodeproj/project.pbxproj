@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56294E021B0AD09400E040F2 /* InputInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56294E011B0AD09400E040F2 /* InputInfoViewController.swift */; };
+		56294E041B0B200700E040F2 /* welcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56294E031B0B200700E040F2 /* welcomeViewController.swift */; };
+		56294E0B1B0B391100E040F2 /* AddInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56294E0A1B0B391100E040F2 /* AddInfoModel.swift */; };
+		56294E0D1B0B3D4300E040F2 /* displayInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56294E0C1B0B3D4300E040F2 /* displayInfoCell.swift */; };
 		567617231B0A38A600B2530A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567617221B0A38A600B2530A /* ViewController.swift */; };
 		567617261B0A38A600B2530A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567617241B0A38A600B2530A /* Main.storyboard */; };
 		567617281B0A38A600B2530A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 567617271B0A38A600B2530A /* Images.xcassets */; };
@@ -17,8 +21,6 @@
 		567617451B0A3FA500B2530A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567617441B0A3FA500B2530A /* AppDelegate.swift */; };
 		567617481B0A439500B2530A /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567617471B0A439500B2530A /* MineViewController.swift */; };
 		5676174A1B0A44C800B2530A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567617491B0A44C800B2530A /* SettingViewController.swift */; };
-		5676174D1B0A48A700B2530A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5676174B1B0A48A700B2530A /* home.png */; };
-		5676174E1B0A48A700B2530A /* home1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5676174C1B0A48A700B2530A /* home1.png */; };
 		567617501B0A5E7E00B2530A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5676174F1B0A5E7E00B2530A /* Util.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56294E011B0AD09400E040F2 /* InputInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputInfoViewController.swift; sourceTree = "<group>"; };
+		56294E031B0B200700E040F2 /* welcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = welcomeViewController.swift; sourceTree = "<group>"; };
+		56294E051B0B266900E040F2 /* TouchIDTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TouchIDTest.entitlements; sourceTree = "<group>"; };
+		56294E0A1B0B391100E040F2 /* AddInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddInfoModel.swift; sourceTree = "<group>"; };
+		56294E0C1B0B3D4300E040F2 /* displayInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayInfoCell.swift; sourceTree = "<group>"; };
 		5676171B1B0A38A600B2530A /* TouchIDTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchIDTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5676171F1B0A38A600B2530A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		567617221B0A38A600B2530A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,8 +54,6 @@
 		567617441B0A3FA500B2530A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567617471B0A439500B2530A /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		567617491B0A44C800B2530A /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		5676174B1B0A48A700B2530A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		5676174C1B0A48A700B2530A /* home1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home1.png; sourceTree = "<group>"; };
 		5676174F1B0A5E7E00B2530A /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +76,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56294DFF1B0AC29800E040F2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				567617421B0A3EA500B2530A /* Safety.swift */,
+				5676174F1B0A5E7E00B2530A /* Util.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		56294E001B0AC2A600E040F2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				567617241B0A38A600B2530A /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		56294E081B0B38E000E040F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56294E0C1B0B3D4300E040F2 /* displayInfoCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		56294E091B0B38E800E040F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56294E0A1B0B391100E040F2 /* AddInfoModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		567617121B0A38A600B2530A = {
 			isa = PBXGroup;
 			children = (
@@ -93,14 +131,14 @@
 		5676171D1B0A38A600B2530A /* TouchIDTest */ = {
 			isa = PBXGroup;
 			children = (
+				56294E091B0B38E800E040F2 /* Model */,
+				56294E081B0B38E000E040F2 /* View */,
+				56294E051B0B266900E040F2 /* TouchIDTest.entitlements */,
+				56294E001B0AC2A600E040F2 /* Storyboard */,
+				56294DFF1B0AC29800E040F2 /* API */,
 				567617461B0A437D00B2530A /* Controller */,
 				567617441B0A3FA500B2530A /* AppDelegate.swift */,
-				567617421B0A3EA500B2530A /* Safety.swift */,
-				5676174F1B0A5E7E00B2530A /* Util.swift */,
-				567617241B0A38A600B2530A /* Main.storyboard */,
 				567617271B0A38A600B2530A /* Images.xcassets */,
-				5676174B1B0A48A700B2530A /* home.png */,
-				5676174C1B0A48A700B2530A /* home1.png */,
 				567617291B0A38A600B2530A /* LaunchScreen.xib */,
 				5676171E1B0A38A600B2530A /* Supporting Files */,
 			);
@@ -138,6 +176,8 @@
 				567617221B0A38A600B2530A /* ViewController.swift */,
 				567617471B0A439500B2530A /* MineViewController.swift */,
 				567617491B0A44C800B2530A /* SettingViewController.swift */,
+				56294E011B0AD09400E040F2 /* InputInfoViewController.swift */,
+				56294E031B0B200700E040F2 /* welcomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -191,6 +231,12 @@
 				TargetAttributes = {
 					5676171A1B0A38A600B2530A = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = PR9VB73X55;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					5676172F1B0A38A600B2530A = {
 						CreatedOnToolsVersion = 6.3;
@@ -222,8 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5676174D1B0A48A700B2530A /* home.png in Resources */,
-				5676174E1B0A48A700B2530A /* home1.png in Resources */,
 				567617261B0A38A600B2530A /* Main.storyboard in Resources */,
 				5676172B1B0A38A600B2530A /* LaunchScreen.xib in Resources */,
 				567617281B0A38A600B2530A /* Images.xcassets in Resources */,
@@ -245,11 +289,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5676174A1B0A44C800B2530A /* SettingViewController.swift in Sources */,
+				56294E041B0B200700E040F2 /* welcomeViewController.swift in Sources */,
+				56294E0D1B0B3D4300E040F2 /* displayInfoCell.swift in Sources */,
 				567617501B0A5E7E00B2530A /* Util.swift in Sources */,
 				567617451B0A3FA500B2530A /* AppDelegate.swift in Sources */,
 				567617431B0A3EA500B2530A /* Safety.swift in Sources */,
+				56294E021B0AD09400E040F2 /* InputInfoViewController.swift in Sources */,
 				567617231B0A38A600B2530A /* ViewController.swift in Sources */,
 				567617481B0A439500B2530A /* MineViewController.swift in Sources */,
+				56294E0B1B0B391100E040F2 /* AddInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +424,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TouchIDTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -386,9 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TouchIDTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

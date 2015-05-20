@@ -9,7 +9,7 @@
 import UIKit
 import LocalAuthentication
 class Safety: NSObject {
-    
+    static var success :Bool?
     //单例
     class var sharedSafe: Safety {
         struct Singleton {
@@ -18,8 +18,8 @@ class Safety: NSObject {
         return Singleton.instance
     }
     
-    //通过通知中心 调用touchID
-    func touchIDNoti(){
+    //touchID
+    func touchIDNoti(block:(Bool, NSError!) -> Void ){
         
         var laContext = LAContext()
         
@@ -29,14 +29,9 @@ class Safety: NSObject {
         
         if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: &authError){
             laContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: errorReason, reply: { (success, error) -> Void in
-                if success {
-                    println("success")
-                }
-                else{
-                    //点击 输入密码时
-                    
-                    println("failed")
-                }
+                
+                block(success,error)
+                
             })
         }
             

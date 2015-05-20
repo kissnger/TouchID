@@ -31,4 +31,10 @@ class Util: NSObject {
     }
     
     
+    class func showAlert(#title: String?, message: String?){
+        var hub = UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: "ok")
+        hub .show()
+    }
+    
+    
 }

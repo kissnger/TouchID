@@ -10,22 +10,27 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var notiName = "TouchID"
+    
+    let TouchID = "TouchID"
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NSThread.sleepForTimeInterval(3.0)
+        return true
+    }
+    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        
+        //添加TouchID认证的通知中心
+        Util.addNotiCenter(self,name: TouchID, selector: "safeNoti")
         
         
-        Util.addNotiCenter(self,name: notiName, selector: "safeNoti")
-        
-        Util.postNoti(name:notiName)
-        
+        //发送通知
+        Util.postNoti(name:TouchID)
         
         return true
     }
-
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -39,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
         
-        Util.postNoti(name:notiName)
+        Util.postNoti(name:TouchID)
         
     }
 
@@ -50,9 +55,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    
     func safeNoti(){
-        Safety.sharedSafe.touchIDNoti()
+        
+        //TouchID返回状态
+        
+        Safety.sharedSafe.touchIDNoti { (success, NSError) -> Void in
+            if success {
+                
+                println("success")
+                
+                Util.postNoti(name: "safeSuccess")
+                Safety.success = true
+            }
+            else{
+                
+                //点击 输入密码时
+                println("failed")
+            }
+
+        }
     }
 
 }
