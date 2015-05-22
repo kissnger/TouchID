@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myTabelView : UITableView!
     
-    var dataArray:NSMutableArray?
+    var dataArray = [AddInfoModel]()
     
     
     override func viewWillAppear(animated: Bool) {
@@ -31,10 +31,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        dataArray = NSMutableArray()
        
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+
+    }
     override func observeValueForKeyPath(keyPath: String,
                                  ofObject object: AnyObject,
                               change: [NSObject : AnyObject],
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
     {
         if keyPath == "dataArray" {
             let view  = self.view.viewWithTag(200) as! UILabel
-            (dataArray!.count > 0) ? (view.hidden = true) : (view.hidden = false)
+            (dataArray.count > 0) ? (view.hidden = true) : (view.hidden = false)
         }
         
     }
@@ -53,8 +56,7 @@ class ViewController: UIViewController {
         
         infoVC.sendBlock = { model ->() in
             
-            
-            self.dataArray!.addObject(model)
+            self.dataArray.append(model)
             self.myTabelView.reloadData()
             println(model)
         }
@@ -76,7 +78,7 @@ extension ViewController : UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("infoCell") as! displayInfoCell
         
-        let model = dataArray?.objectAtIndex(indexPath.row) as! AddInfoModel
+        let model = dataArray[indexPath.row]
         
         cell.setValue(model, forKey: "model")
         
@@ -86,7 +88,7 @@ extension ViewController : UITableViewDataSource{
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray!.count
+        return dataArray.count
     }
     
 }

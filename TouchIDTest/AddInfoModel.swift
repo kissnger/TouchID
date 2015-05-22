@@ -14,11 +14,12 @@ class AddInfoModel: NSObject {
     var passWord : String!
     var platform : String!
     
-    init(info : NSDictionary) {
-        self.eMail    = info["eMail"] as! String
-        self.userName = info["userName"] as! String
-        self.passWord = info["passWord"] as! String
-        self.platform = info["platform"] as! String
+    init(info : Dictionary<String,String!> ) {
+        
+        self.eMail    = info["eMail"]!
+        self.userName = info["userName"]!
+        self.passWord = info["passWord"]!
+        self.platform = info["platform"]!
     }
     
     func discription() ->NSString{

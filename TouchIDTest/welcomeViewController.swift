@@ -15,6 +15,9 @@ class welcomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         Util.addNotiCenter(self, name: "safeSuccess", selector: "dismissVC")
+        
+        
+               
        
     }
     
